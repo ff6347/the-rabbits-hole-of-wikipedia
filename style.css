@@ -244,9 +244,9 @@ figure {
 }
 
 section {
-  animation: fadeIn 2s ease-out;
+  animation: fadeIn 0.5s ease-out;
   animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+  animation-range: entry 0% cover 10%;
 }
 
 @keyframes fadeIn {
