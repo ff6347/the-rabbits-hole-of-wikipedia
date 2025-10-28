@@ -1,0 +1,242 @@
+/* reset.css derived from https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* on using layers in reset https://www.mayank.co/blog/css-reset-layer */
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+}
+.amatic-sc-regular {
+  font-family: 'Amatic SC', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: 'Amatic SC', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amatic SC';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./assets/fonts/AmaticSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Amatic SC';
+  font-weight: 700;
+  font-style: bold;
+  src: url('./assets/fonts/AmaticSC-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefine Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./assets/fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+
+/* custom global styles */
+
+body {
+  min-height: 50000px;
+  min-width: 50000px;
+  background: black;
+  color: white;
+
+  font-family: 'Josefine Sans', sans-serif;
+  /* font-weight: 400;
+  font-style: normal; */
+}
+
+/** 1.618 — Golden ratio */
+html {
+  font-size: 16px;
+}
+h1 {
+  font-size: 4.236rem;
+}
+h2 {
+  font-size: 2.618rem;
+}
+h3 {
+  font-size: 1.618rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.618rem;
+}
+h6 {
+  font-size: 0.382rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Amatic SC', sans-serif;
+}
+a {
+  color: deepskyblue;
+}
+
+.toc {
+  display: flex;
+  flex-direction: row;
+  /* background: red; */
+  gap: 8px;
+  height: 200px;
+  font-family: 'Amatic SC';
+  font-size: 2rem;
+
+  toc-item:nth-child(even) {
+    align-self: flex-end;
+    /* align-items: flex-end; */
+    /* background: blue; */
+  }
+  toc-item {
+    flex: 1;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    circle-item {
+      display: block;
+      min-width: 50px;
+      min-height: 50px;
+      border-radius: 50%;
+      background: radial-gradient(
+        ellipse at center,
+        #0d0914,
+        rgba(0, 148, 197, 0.2)
+      );
+    }
+  }
+}
+
+section.navigation {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+
+  scroll-margin-top: 200px; /* Offset from top */
+  scroll-margin-right: 700px; /* Offset from top */
+}
+
+figure {
+  min-width: 350px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card {
+  position: absolute;
+  width: 77ch;
+}
+
+.navigation {
+  top: 25000px;
+  left: 25000px;
+}
+
+.abstract {
+  top: 5000px;
+  left: 8000px;
+  scroll-margin-top: 100px;
+  scroll-margin-left: 500px;
+}
+
+.taxonomy {
+  left: 70723px;
+  top: 500px;
+  scroll-margin-top: 100px;
+  scroll-margin-left: 300px;
+}
+
+.description {
+  left: 150000px;
+  top: 18000px;
+  scroll-margin-top: 100px;
+  scroll-margin-left: 400px;
+}
+
+.distribution {
+  left: 120000px;
+  top: 60000px;
+  scroll-margin-top: 100px;
+  scroll-margin-left: 400px;
+}
+
+.ecology {
+  left: 50000px;
+  top: 80000px;
+  scroll-margin-top: 100px;
+  scroll-margin-left: 400px;
+}
+
+.conservation {
+  left: 0px;
+  top: 50000px;
+  scroll-margin-top: 100px;
+  scroll-margin-left: 400px;
+}
+
+.refs {
+  left: 100000px;
+  top: 50000px;
+}
+
+.toc {
+  /* position: absolute; */
+  left: 50%;
+  top: 50%;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
