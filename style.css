@@ -120,7 +120,8 @@ a {
   color: deepskyblue;
 }
 
-.toc {
+.toc,
+.backlinks {
   display: flex;
   flex-direction: row;
   /* background: red; */
@@ -135,9 +136,10 @@ a {
     /* background: blue; */
   }
   toc-item {
-    flex: 1;
+    flex: 0 1 auto;
     height: 100px;
-
+    max-width: fit-content;
+    min-width: 200px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -239,4 +241,19 @@ figure {
 .hidden {
   display: none;
   visibility: hidden;
+}
+
+section {
+  animation: fadeIn 2s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(0.8);
+  }
 }
